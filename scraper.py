@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import json
 
 
 def get_citations_needed_count(URL: str)-> int:
@@ -50,4 +51,11 @@ def get_citations_needed_report(URL: str)-> str:
 if __name__ =="__main__":
     URL="https://en.wikipedia.org/wiki/History_of_Mexico"
     print(get_citations_needed_count(URL))
-    print(get_citations_needed_report(URL))
+    report=get_citations_needed_report(URL)
+    print(report)
+    data_json=json.dumps(report)
+    print(data_json)
+
+    with open('citations_needed_report.json', 'w') as file :
+        file.write(data_json)
+    
