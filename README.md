@@ -15,12 +15,6 @@
 - e.g. `python scraper.py`
 
 #### How to use your library (where applicable)
- * pip install pytest
  * pip install bs4
  * pip install requests
 
-#### Tests
-
-- How do you run tests?
-  * pytest
-  
